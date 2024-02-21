@@ -95,6 +95,7 @@ body{
 }
 .site-header-link{
     text-decoration: none;
+    flex-shrink: 0;
 }
 .site-header-link:hover{
     opacity: 0.8;
@@ -115,7 +116,7 @@ body{
 }
 .site-nav {
     margin-left: auto;
-    
+    white-space: now;
 }
 .sitenav-list {
     display: flex;
