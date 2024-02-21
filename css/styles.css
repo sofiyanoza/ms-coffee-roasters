@@ -1,8 +1,8 @@
 /* CUSTOM PROPS */
 
 :root{
-    --main-color:#f3d7b7;
     --green:#0a775f;
+    --outline-color:var(--green);
 }
 
 
@@ -29,7 +29,7 @@ body{
     font-family:  "Roboto","Arial",sans-serif;
     font-size: 18px;
     line-height: 30px;
-    background-color:var(--main-color);
+    background-color:#fff;
     color: #333;
 }
 
@@ -38,12 +38,17 @@ body{
     height: auto;
 }
 
+*:focus{
+    outline: 2px solid var(--outline-color);
+    outline-offset: 3px;
+}
+
 /* CONTAINER  */
 .container{
     width: 100%;
     max-width: 1440px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -73,9 +78,15 @@ body{
     padding-top: 40px;
     padding-bottom: 40px;
 }
+.site-header-intro-wrapper{
+    background-image: url(../img/light-bg-img.jpg);
+}
+
 .header-container{
     display: flex;
     align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
 
 }
 .site-header-link-wrapper {
@@ -84,6 +95,12 @@ body{
 }
 .site-header-link{
     text-decoration: none;
+}
+.site-header-link:hover{
+    opacity: 0.8;
+}
+.site-header-link:active{
+    opacity: 0.6;
 }
 .site-header-logo-img-emblem{
    margin-right: 8px;
@@ -104,6 +121,8 @@ body{
     display: flex;
     align-items: center;
     list-style: none;
+    padding: 0;
+    margin: 0;
     
 }
 .sitenav-item {
