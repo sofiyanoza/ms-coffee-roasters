@@ -111,7 +111,7 @@ body{
 }
 .site-header-intro-wrapper{
     background-image: url(../img/light-bg-img.jpg);
-    background-color: ;
+    background-color:var(--light-brown) ;
 }
 
 .header-container{
