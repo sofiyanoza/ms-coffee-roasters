@@ -1,3 +1,11 @@
+/* CUSTOM PROPS */
+
+:root{
+    --main-color:#f3d7b7;
+    --green:#0a775f;
+}
+
+
 /* GLOBAL */
 
 html{
@@ -18,11 +26,11 @@ body{
     height: 100%;
     padding: 0;
     margin: 0;
-    font-family: "Arial",sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    background-color: #fff;
-    color: #222;
+    font-family:  "Roboto","Arial",sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+    background-color:var(--main-color);
+    color: #333;
 }
 
 .img{
@@ -33,14 +41,215 @@ body{
 /* CONTAINER  */
 .container{
     width: 100%;
-    max-width: 1200px;
+    max-width: 1440px;
     padding-left: 50px;
     padding-right: 50px;
     margin-left: auto;
     margin-right: auto;
 }
 
+
+
+/* FONTS  */
+
+
+@font-face {
+    font-display: swap; 
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/roboto-v30-latin-regular.woff2') format('woff2');
+  }
+  /* roboto-700 - latin */
+  @font-face {
+    font-display: swap; 
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/roboto-v30-latin-700.woff2') format('woff2');
+  }
+  /* HEADER   */
+  .site-header {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.header-container{
+    display: flex;
+    align-items: center;
+
+}
+.site-header-link-wrapper {
+  display: flex;
+    align-items: center;
+}
+.site-header-link{
+    text-decoration: none;
+}
+.site-header-logo-img-emblem{
+   margin-right: 8px;
+   object-fit: cover;
+   width: 24px;
+   height: 24px;
+}
+.site-header-logo-img{
+    object-fit: cover;
+    width:223px ;
+    height: 24px;
+}
+.site-nav {
+    margin-left: auto;
+    
+}
+.sitenav-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    
+}
+.sitenav-item {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.sitenav-item:not(:last-child){
+    margin-right: 40px;
+}
+.sitenav-link {
+    color: #333;
+    text-decoration: none;
+font-size: 12px;
+font-weight: 700;
+line-height: 14px;
+letter-spacing: 1px;
+text-align: left;
+text-transform: uppercase;
+}
+
+.sitenav-link:hover{
+color: var(--green);
+}
+.sitenav-link :active{
+opacity: 0.8;
+}
+
 /* MAIN CONTENT  */
 .main-content{
     flex-grow: 1;
 }
+/* SITE HERO  */
+.site-hero {
+    padding-top: 119px;
+    padding-bottom: 243px;
+ background-image: url(../img/hero-img.jpeg);
+ background-repeat: no-repeat;
+ background-size: contain;
+ background-position: bottom right;
+}
+.hero-container {
+    width: 100%;
+    max-width: 464px;
+    margin-left: 134px;
+    
+}
+.hero-header {
+    margin-top: 0;
+    margin-bottom: 24px;
+    color:#000;
+font-size: 64px;
+font-weight: 700;
+line-height: 75px;
+letter-spacing: 0px;
+text-align: left;
+}
+.hero-text {
+    margin-top: 0;
+    margin-bottom: 34px;
+    color: #000;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0px;
+text-align: left;
+}
+.main-button {
+width: 193px;
+height: 51px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+border: 0;
+border-radius: 100px;
+font-weight: 500;
+padding: 16px 24px 16px 24px;
+background-color: var(--green);
+color:#fff;
+}
+
+/* OUR COLLECTION  */
+
+.collection {
+    padding-top: 50px;
+    padding-bottom: 153px;
+background-color: rgb(229, 229, 229);
+}
+.collection-container {
+
+}
+.collections-heading {
+color: rgb(0, 0, 0);
+font-size: 50px;
+font-weight: 700;
+line-height: 59px;
+letter-spacing: 0px;
+text-align: center;
+}
+.collections-list {
+    display: flex;
+    flex-direction: column;
+}
+.collections-item {
+    display: flex;
+    align-items: center;
+    width: 390px;
+}
+.collections-item:not(:last-child){
+    margin-bottom: 120px;
+}
+.collections-item:nth-child(1) .collections-image,
+.collections-item:nth-child(3) .collections-image {
+    margin-right: 117px;
+}
+
+.collections-image {
+    display: block;
+    
+width: 450px;
+height: 375px;
+object-fit: cover;
+}
+
+.collections-header {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: rgb(51, 51, 51);
+font-size: 48px;
+font-weight: 500;
+line-height: 56px;
+letter-spacing: 0px;
+text-align: left;
+}
+.collections-text{
+    margin: 0;
+    color: rgb(51, 51, 51);
+font-size: 22px;
+font-weight: 400;
+line-height: 34px;
+letter-spacing: 0px;
+text-align: left;
+width: 390px;
+}
+.collections-item:nth-child(2) .collections-header-text-wrapper,
+.collections-item:nth-child(4) .collections-header-text-wrapper{
+    margin-right: 117px;
+}
+
