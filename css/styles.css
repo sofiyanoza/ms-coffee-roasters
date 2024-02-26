@@ -8,6 +8,7 @@
     --brown-80:rgba(201, 155, 103,0.8);
     --brown-60:rgba(201, 155, 103,0.6);
     --light-brown:#f3d7b7;
+    --light-green:#f8f8f2;
     --outline-color:var(--green);
 }
 
@@ -184,15 +185,11 @@ color: var(--green);
 opacity: 0.8;
 }
 
-/* MAIN CONTENT  */
-.main-content{
-    flex-grow: 1;
-}
 /* SITE HERO  */
 .site-hero {
 }
 .hero-container {
-   display: flex;
+    display: flex;
    padding-left: 0;
    padding-right: 0;
     
@@ -209,17 +206,17 @@ opacity: 0.8;
     margin-top: 0;
     margin-bottom: 24px;
     color:#000;
-font-size: 64px;
-font-weight: 700;
-line-height: normal;
-letter-spacing: 0px;
-text-align: left;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0px;
+    text-align: left;
 }
 .hero-text {
-  margin: 0;
+    margin: 0;
     color: #000;
-font-size: 16px;
-font-weight: 400;
+    font-size: 16px;
+    font-weight: 400;
 line-height: 24px;
 letter-spacing: 0px;
 text-align: left;
@@ -237,27 +234,40 @@ text-align: left;
     height: 696px;
 }
 
-/* OUR COLLECTION  */
 
-.collection {
-    padding-top: 50px;
-    padding-bottom: 153px;
-background-color: rgb(229, 229, 229);
+/* MAIN CONTENT  */
+
+/* INDEX COLLECTION  */
+.main-content{
+    flex-grow: 1;
+    padding-top: 20px;
+    padding-bottom: 50px;
 }
-.collection-container {
 
+
+.index-collection-inner{
+    padding: 50px ;
+    background-color: var(--light-green);
+    background-image: url(../img/index-collections-bg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .collections-heading {
-color: rgb(0, 0, 0);
-font-size: 50px;
-font-weight: 700;
-line-height: 59px;
-letter-spacing: 0px;
-text-align: center;
+    margin-top: 0;
+    margin-bottom: 80px;
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    text-transform: uppercase;
 }
 .collections-list {
-    display: flex;
-    flex-direction: column;
+  
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 .collections-item {
     display: flex;
@@ -267,41 +277,65 @@ text-align: center;
 .collections-item:not(:last-child){
     margin-bottom: 120px;
 }
-.collections-item:nth-child(1) .collections-image,
-.collections-item:nth-child(3) .collections-image {
-    margin-right: 117px;
+.collections-item:nth-child(even) {
+   flex-direction: row-reverse;
 }
 
 .collections-image {
-    display: block;
-    
-width: 450px;
-height: 375px;
-object-fit: cover;
+    flex-shrink: 0;
+   
+    width: 450px;
+    height: 375px;
+    object-fit: cover;
 }
-
+.collection-header-text-wrapper{
+    flex-grow: 1;
+}
 .collections-header {
     margin-top: 0;
     margin-bottom: 10px;
     color: rgb(51, 51, 51);
-font-size: 48px;
-font-weight: 500;
-line-height: 56px;
-letter-spacing: 0px;
-text-align: left;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 56px;
+    letter-spacing: 0px;
+    text-align: left;
 }
 .collections-text{
     margin: 0;
     color: rgb(51, 51, 51);
-font-size: 22px;
-font-weight: 400;
-line-height: 34px;
-letter-spacing: 0px;
-text-align: left;
-width: 390px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0px;
+    text-align: left;
+    width: 390px;
 }
-.collections-item:nth-child(2) .collections-header-text-wrapper,
-.collections-item:nth-child(4) .collections-header-text-wrapper{
-    margin-right: 117px;
+.collections-item:nth-child(1) .collections-header-text-wrapper,
+.collections-item:nth-child(3) .collections-header-text-wrapper{
+    padding-left: 117px;
 }
-
+/* RETINA BG  */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+    .site-header-intro-wrapper{
+        background-image: url(../img/light-bg-img@2x.jpg);
+      
+    }
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+.index-collection-inner{
+    background-image: url(../img/index-collections-bg@2x.jpeg);
+}
+}
