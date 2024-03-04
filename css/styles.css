@@ -143,17 +143,7 @@ body{
 .site-header-link:active{
     opacity: 0.6;
 }
-.site-header-logo-img-emblem{
-    margin-right: 8px;
-    object-fit: cover;
-    width: 24px;
-    height: 24px;
-}
-.site-header-logo-img{
-    object-fit: cover;
-    width:223px ;
-    height: 24px;
-}
+
 .site-nav {
     margin-left: auto;
     white-space: now;
@@ -490,6 +480,64 @@ body{
 .how-it-works-cta:focus{
     background-color: var(--light-brown);
 }
+
+/* SITE FOOTER  */
+.site-footer{
+    background-color: var(--light-brown);
+}
+.footer-inner {
+    padding: 65px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url(../img/light-bg-img.jpg);
+    background-repeat: no-repeat;
+    background-size: auto 160px;
+}
+
+.site-footer-link{
+    text-decoration: none;
+    flex-shrink: 0;
+}
+.site-footer-link:hover{
+    opacity: 0.8;
+}
+.site-footer-link:active{
+    opacity: 0.6;
+}
+.logo-img{
+    width: 235px;
+    height: 54px;
+    display: block;
+    object-fit: contain;
+}
+.site-nav-footer{
+    margin-right: 331px;
+}
+.site-nav-footer .sitenav-link{
+    font-size: 16px;
+    line-height: normal;
+}
+.site-footer-socials {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.site-footer-socials-item:not( :last-child) {
+    margin-right: 30px;
+}
+.site-footer-socials-link {
+    display: block;
+    color: #333;
+}
+.site-footer-socials-link :hover{
+    color: var(--green);
+}
+.site-footer-socials-link:active{
+    opacity: 0.8;
+}
 /* RETINA BG  */
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -498,7 +546,8 @@ only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) { 
-    .site-header-intro-wrapper{
+    .site-header-intro-wrapper,
+    .footer-inner {
         background-image: url(../img/light-bg-img@2x.jpg);
     }
     
@@ -512,5 +561,9 @@ only screen and (                min-resolution: 2dppx) {
 
     .how-it-works-inner{
         background-image: url(../img/how-it-works-bg@2x.jpeg);
+    }
+
+    .footer-inner{
+        background-image: url(../img/site-footer-bg@2x.jpeg);
     }
 }
